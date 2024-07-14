@@ -1,0 +1,88 @@
+body {
+    font-family: 'Jost', sans-serif;
+    background: linear-gradient(135deg, #9dfbd3 0%, #aaa8f9 100%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: transparent;
+    color: white;
+}
+
+.main-heading {
+    font-family: 'Slackey', cursive;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.game-block {
+    background-color: #f5b3b5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.game-block:hover {
+    transform: scale(1.05);
+}
+
+.game-block img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.game-block p {
+    margin: 10px 0;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #48237e;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #d0a77b;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #baffab;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #9dfbd3;
+    border-radius: 20px;
+    border: 3px solid #baffab;
+}

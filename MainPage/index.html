@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Arcade</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&family=Slackey&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="main-heading" data-aos="fade-down">Welcome to the Online Arcade</h1>
+    </header>
+    <main>
+        <div class="game-container">
+            <div class="game-block" data-tilt data-aos="fade-up" onclick="openGame('pacman')">
+                <img src="https://via.placeholder.com/300x200" alt="Pacman">
+                <p>Pacman</p>
+            </div>
+            <div class="game-block" data-tilt data-aos="fade-up" onclick="openGame('flappybird')">
+                <img src="https://via.placeholder.com/300x200" alt="Flappy Bird">
+                <p>Flappy Bird</p>
+            </div>
+            <div class="game-block" data-tilt data-aos="fade-up" onclick="openGame('snake')">
+                <img src="https://via.placeholder.com/300x200" alt="Snake">
+                <p>Snake</p>
+            </div>
+            <div class="game-block" data-tilt data-aos="fade-up" onclick="openGame('pong')">
+                <img src="https://via.placeholder.com/300x200" alt="Pong">
+                <p>Pong</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Made with ❤️ by Arnav</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt.js/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+        AOS.init();
+        VanillaTilt.init(document.querySelectorAll(".game-block"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5,
+        });
+        function openGame(gameName) {
+            window.location.href = gameName + '/' + gameName + '.html';
+        }
+    </script>
+</body>
+</html>
